@@ -1,3 +1,4 @@
+// fs is a Node standard library package for reading and writing files
 const fs = require("fs");
 const path = require('path');
 const inquirer = require("inquirer");
@@ -18,7 +19,16 @@ const questions = [
     {
         type: 'input',
         message: 'What is your Github project url?',
-        name: 'url'
+        name: 'url',
+        // validates that there is an input if not, then tells the user to input one 
+        validate: urlInput => {
+            if (urlInput) {
+                return true;
+            } else {
+                console.log('Please provide a URL');
+                return false;
+            }
+        }
     },
     {
         type: 'input',
@@ -61,13 +71,23 @@ const questions = [
 
 // function to write README file
 function writeToFile(fileName, data) {
+// Return the contents of 'fileName' as a string in the variable "data"
+// "utf8" encodes the raw buffer data in human-readable format
+    fs.writeFile(fileName, data, 'utf-8')
 }
 
 // function to initialize program
 function init() {
-    // inquirer
-    // .prompt(questions)
-    // .then(data) =>
+    inquirer
+    // Goes through each of the questions 
+    .prompt(questions)
+    .then((data) => {
+        // successfully prints out the data
+        console.log(data)
+        // Assigned the generateMarkDown with the data pulled from the answers
+        var fileName = generateMarkdown(data)
+        writeToFile(fileName)
+    })
 
 }
 
