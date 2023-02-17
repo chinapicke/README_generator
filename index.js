@@ -51,9 +51,11 @@ const questions = [
         name: 'test'
     },
     {
-        type: 'input',
-        message: 'Did you collaborate with anyone for this project?',
-        name: 'credits'
+        // choices to help with selecting license badge 
+        type: 'list',
+        message: 'Which license do you want to apply?',
+        name: 'license',
+        choices: ['MIT', 'APACHE 2.0', 'GPL v3', 'BSD 3','None']
     },
 ];
 
