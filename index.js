@@ -9,12 +9,28 @@ const questions = [
     {
         type: 'input',
         message: 'What is your Github username?',
-        name: 'username'
+        name: 'username',
+        validate: usernameInput => {
+            if (usernameInput) {
+                return true;
+            } else {
+                console.log('Please provide a username');
+                return false;
+            }
+        }
     },
     {
         type: 'input',
         message: 'What is your email?',
-        name: 'email'
+        name: 'email',
+        validate: emailInput => {
+            if (emailInput) {
+                return true;
+            } else {
+                console.log('Please provide an email address');
+                return false;
+            }
+        }
     },
     {
         type: 'input',
@@ -33,32 +49,80 @@ const questions = [
     {
         type: 'input',
         message: 'What is the projects title?',
-        name: 'title'
+        name: 'title',
+        validate: titleInput => {
+            if (titleInput) {
+                return true;
+            } else {
+                console.log('Please provide your projects title');
+                return false;
+            }
+        }
     },
     {
         type: 'input',
         message: 'Provide a short description explaining the what, why, and how of your project.',
-        name: 'description'
+        name: 'description',
+        validate: descriptInput => {
+            if (descriptInput) {
+                return true;
+            } else {
+                console.log('Please provide some description about your project');
+                return false;
+            }
+        }
     },
     {
         type: 'input',
         message: 'Provide a step-by-step process of programmes needed to be installed',
-        name: 'installation'
+        name: 'installation',
+        validate: installInput => {
+            if (installInput) {
+                return true;
+            } else {
+                console.log('If there are no steps, please enter N/A');
+                return false;
+            }
+        }
     },
     {
         type: 'input',
         message: 'Explain how to use this program',
-        name: 'usage'
+        name: 'usage',
+        validate: usageInput => {
+            if (usageInput) {
+                return true;
+            } else {
+                console.log('Please enter info how to use this program');
+                return false;
+            }
+        }
     },
     {
         type: 'input',
         message: 'Did you collaborate with anyone for this project?',
         name: 'contributer'
+        validate: creditInput => {
+            if (creditInput) {
+                return true;
+            } else {
+                console.log('If you have no collaborators, enter N/A');
+                return false;
+            }
+        }
     },
     {
         type: 'input',
         message: 'What command is used to test a run?',
-        name: 'test'
+        name: 'test',
+        validate: testInput => {
+            if (testInput) {
+                return true;
+            } else {
+                console.log('If you have no commands, enter N/A');
+                return false;
+            }
+        }
     },
     {
         // choices to help with selecting license badge 
@@ -73,7 +137,7 @@ const questions = [
 function writeToFile(fileName, data) {
 // Return the contents of 'fileName' as a string in the variable "data"
 // "utf8" encodes the raw buffer data in human-readable format
-    fs.writeFile(fileName, data, 'utf-8')
+    fs.writeFile(fileName, data, function(err))
 }
 
 // function to initialize program
