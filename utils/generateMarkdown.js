@@ -14,10 +14,11 @@ function generateMarkdown(data) {
   ## Table of Contents
   - [Installation](#installation)
   - [Usage](#usage)
+  - [Credits](#credits)
   - [License](#license)
+  - [Features](#features)
   - [Tests](#tests)
-  - [Contributors](#contributors)
-  - [Details](#details)
+  - [Contact](#contact)
 
   ## Installation
   Steps required to run this program are: ${data.installation}
