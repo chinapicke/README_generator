@@ -32,13 +32,28 @@ const questions = [
     },
     {
         type: 'input',
-        message: 'What is your Github username',
-        name: 'username'
+        message: 'Provide a step-by-step process of programmes needed to be installed',
+        name: 'installation'
     },
     {
         type: 'input',
-        message: 'What is your Github username',
-        name: 'username'
+        message: 'Explain how to use this program',
+        name: 'usage'
+    },
+    {
+        type: 'input',
+        message: 'Did you collaborate with anyone for this project?',
+        name: 'contributer'
+    },
+    {
+        type: 'input',
+        message: 'What command is used to test a run?',
+        name: 'test'
+    },
+    {
+        type: 'input',
+        message: 'Did you collaborate with anyone for this project?',
+        name: 'credits'
     },
 ];
 

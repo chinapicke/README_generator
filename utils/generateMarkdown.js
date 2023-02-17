@@ -3,22 +3,23 @@
 function generateMarkdown(data) {
   // Badges for the README file 
 // Assigning to variables so that they can used and changed when using ${}
+// Github picture for questions
   const avatar = `https://github.com/${data.username}.png?size=50`;
-  const gitHub = `https://img.shields.io/badge/Github-${data.username}-4cbbb9`;
+  const licenseBadge = `https://opensource.org/licenses/${data.license}`
 
   return `# ${data.title}
-   
-  ## Description
-    ${data.description}
-
+  
   ## Table of Contents
+  - [Description](#description)
   - [Installation](#installation)
   - [Usage](#usage)
-  - [Credits](#credits)
-  - [License](#license)
-  - [Features](#features)
+  - [Contributing](#contributing)
   - [Tests](#tests)
-  - [Contact](#contact)
+  - [License](#license)
+  - [Questions](#questions)
+
+  ## Description
+  ${data.description}
 
   ## Installation
   Steps required to run this program are: ${data.installation}
@@ -26,21 +27,16 @@ function generateMarkdown(data) {
   ## Usage
   Instructions and examples of how to use this program: ${data.usage}
 
-  ## Credits
+  ## Contributions
   ${data.contributer}
-
-  ## License
-  ${data.license}
-
-  ----------------------
-  ## Features
-  Features included: ${data.features}
 
   ## Tests
   To test, run the following command: ${data.tests}
 
-  ## Contact
-  \n![Badge](${gitHub}) 
+  ## License
+  ${licenseBadge}
+
+  ## Questions
   \n![Profile Image](${avatar})
   \nView the project in GitHub at: ${data.url}
   \nIf you have any questions, contact the author directly at ${data.email}.`;
