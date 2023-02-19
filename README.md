@@ -27,6 +27,9 @@
   
   ## Usage
   Instructions and examples of how to use this program: Once in the terminal, route to where the index.js file is stored. Open terminal in VS code and type node index.js, each question will be displayed for the user to write or select an input. Once completed, the file will be stored in the folder with the index.js file.
+  
+  ![image](https://user-images.githubusercontent.com/117565899/219959958-7c0cfcd3-26ce-4b6c-9f9f-c37d262d32c6.png)
+
 
   ## Contributions
   No
