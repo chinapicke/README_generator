@@ -6,9 +6,13 @@ const licenseBadge = (license)=> {
       badge = '![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)'
   } else if (license === 'Apache 2.0') {
       badge = '![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)'
-  } else if (license === 'GPL v3.0') {
+  } else if (license === 'GPL v3') {
       badge = '![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)'
-  } else {
+  } 
+  else if (license === 'BSD 3'){
+    badge = '![License: BSD 3](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)'
+  }
+  else {
     badge = ""
   }
   return badge;
@@ -25,7 +29,7 @@ function generateMarkdown(data) {
   
   # ${data.title}
 
-  ##${licenseBadge(data.license)}
+  ${licenseBadge(data.license)}
   
   ## Table of Contents
   - [Description](#description)
