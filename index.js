@@ -137,8 +137,12 @@ const questions = [
 
 // function to write README file
 function writeToFile(fileName, data) {
+<<<<<<< HEAD
     // Return the contents of 'fileName' as a string in the variable "data"
     // dirName says you want to put the file in the current directory that the js file is in
+=======
+    // Return the contents of 'fileName' as a string in the variable "data"    // dirName says you want to put the file in the current directory that the js file is in
+>>>>>>> bcd0070c443565bab395500ee5367328f2bcb384
     return fs.writeFile(path.join(__dirname, fileName), generateMarkdown(data), (err) => {
         // if error is true console error, if false console log success
         err ? console.log(err) : console.log('You have successfully made your README file!')
@@ -152,6 +156,7 @@ function init() {
         .then((data) => {
             // successfully prints out the data
             console.log(data, 'Creating README file')
+<<<<<<< HEAD
             // Assigned the generateMarkDown with the data pulled from the answers
             // var fileName = generateMarkdown(data)
             const fileName = `README.md`
@@ -159,8 +164,15 @@ function init() {
             console.log(fileName)
             // concat the generateMarkdwon with the data to then pass into writeTofile so that it can be used
             writeToFile(fileName,data)
+=======
+            //Asssign file name as user title input, but removing the spaces to make into readMe file 
+            const fileName = 'README.md'
+            // to check that it is showing the title input from the data
+            console.log(fileName)
+            // concat the generateMarkdwon with the data to then pass into writeTofile so that it can be used
+            writeToFile(fileName, data)
+>>>>>>> bcd0070c443565bab395500ee5367328f2bcb384
         })
 }
-
 // function call to initialize program
 init();
