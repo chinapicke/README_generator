@@ -144,9 +144,6 @@ function writeToFile(fileName, data) {
         err ? console.log(err) : console.log('You have successfully made your README file!')
     })
 }
-
-// })
-
 // function to initialize program
 function init() {
     inquirer
@@ -164,6 +161,5 @@ function init() {
             writeToFile(fileName, generateMarkdown(data))
         })
 }
-
 // function call to initialize program
 init();
