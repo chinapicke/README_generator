@@ -139,7 +139,7 @@ const questions = [
 // function to write README file
 function writeToFile(fileName, data) {
     // Return the contents of 'fileName' as a string in the variable "data"    // dirName says you want to put the file in the current directory that the js file is in
-    return fs.writeFile(path.join(__dirname, fileName), data, (err) => {
+    return fs.writeFile(path.join(__dirname, fileName), generateMarkdown(data), (err) => {
         // if error is true console error, if false console log success
         err ? console.log(err) : console.log('You have successfully made your README file!')
     })
@@ -157,7 +157,7 @@ function init() {
             // to check that it is showing the title input from the data
             console.log(fileName)
             // concat the generateMarkdwon with the data to then pass into writeTofile so that it can be used
-            writeToFile(fileName, generateMarkdown(data))
+            writeToFile(fileName, data)
         })
 }
 // function call to initialize program
