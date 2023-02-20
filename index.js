@@ -152,8 +152,7 @@ function init() {
         .then((data) => {
             // successfully prints out the data
             console.log(data, 'Creating README file')
-            // Assigned the generateMarkDown with the data pulled from the answers
-            // var fileName = generateMarkdown(data)
+            //Asssign file name as user title input, but removing the spaces to make into readMe file 
             const fileName = `${data.title.split(' ').join('')}.md`
             // to check that it is showing the title input from the data
             console.log(fileName)
