@@ -20,14 +20,12 @@
   Steps required to run this program are: node.js, inquirer 6.5.0, index.js, VS code
   
   ## Usage
-<<<<<<< HEAD
+
   Instructions and examples of how to use this program: Open index.js in VS code, open terminal (preferrably gitbash in VS code), inserted 'node index.js' and presss enter to formulate questions. When finished answering each question, press enter.
-=======
-  Instructions and examples of how to use this program: Once in the terminal, route to where the index.js file is stored. Open terminal in VS code and type node index.js, each question will be displayed for the user to write or select an input. Once completed, the file will be stored in the folder with the index.js file.
   
   ![image](https://user-images.githubusercontent.com/117565899/219959958-7c0cfcd3-26ce-4b6c-9f9f-c37d262d32c6.png)
+  Sample video: https://drive.google.com/file/d/1IwL2z_Lv8RN9hARb4a0ydhuNzqesDpr0/view
 
->>>>>>> bcd0070c443565bab395500ee5367328f2bcb384
 
   ## Contributions
   No
