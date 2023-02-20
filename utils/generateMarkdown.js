@@ -23,7 +23,7 @@ const licenseBadge = (license)=> {
 function generateMarkdown(data) {
 // Assigning to variables so that they can used and changed when using ${}
 // Github picture for questions
-  const avatar = `https://github.com/${data.username}.png?size=50`;
+  const picture = `https://github.com/${data.username}.png?size=50`;
 
   return`
   
@@ -59,7 +59,7 @@ function generateMarkdown(data) {
   ${data.license}
 
   ## Questions
-  \n![Profile Image](${avatar})
+  \n![Profile Image](${picture})
   \nView the project in GitHub at: ${data.url}
   \nIf you have any questions, contact the author directly at ${data.email}.`;
 }
