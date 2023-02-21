@@ -22,9 +22,6 @@
   ## Usage
 
   Instructions and examples of how to use this program: Open index.js in VS code, open terminal (preferrably gitbash in VS code), inserted 'node index.js' and presss enter to formulate questions. When finished answering each question, press enter.
-  
-  ![image](https://user-images.githubusercontent.com/117565899/219959958-7c0cfcd3-26ce-4b6c-9f9f-c37d262d32c6.png)
-  Sample video: https://drive.google.com/file/d/1IwL2z_Lv8RN9hARb4a0ydhuNzqesDpr0/view
 
 
   ## Contributions
